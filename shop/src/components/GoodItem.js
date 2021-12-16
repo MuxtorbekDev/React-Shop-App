@@ -1,5 +1,5 @@
 export default function GoodItem(props) {
-  const [id, name, description, price, full_background] = props;
+  const { id, name, description, price, full_background } = props;
 
   return (
     <div className="card" id={id}>
@@ -12,7 +12,9 @@ export default function GoodItem(props) {
       </div>
       <div className="card-action">
         <button className="btn">Buy</button>
-        <span className="right">{price}$</span>
+        <span className="right" style={{ fontSize: "1.8rem" }}>
+          {price}$
+        </span>
       </div>
     </div>
   );
