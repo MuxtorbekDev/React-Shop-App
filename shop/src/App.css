@@ -56,3 +56,25 @@ nav {
 .card-content {
   flex-grow: 1;
 }
+.cart {
+  position: fixed;
+  bottom: 2rem;
+  cursor: pointer;
+  right: 2rem;
+  padding: 1rem;
+  z-index: 999;
+  color: beige;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 20px 2px rgba(0,0,0,.5);
+  transition: .3s ease-in transform;
+}
+.cart:hover {
+  transform: scale(1.1);
+}
+
+@media (min-width: 777px) {
+  .cart {
+    top: 2rem;
+    bottom: unset;
+  }
+}

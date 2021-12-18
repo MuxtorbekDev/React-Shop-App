@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { API_URL, API_KEY } from "../config";
 import Loader from "./Loader";
 import GoodList from "./GoodList";
+import Cart from "./Cart";
 
 export default function Shop() {
   const [goods, setGoods] = useState([]);
@@ -22,6 +23,7 @@ export default function Shop() {
 
   return (
     <div className="container content ">
+      <Cart quantity={goods.length} />
       {loading ? <Loader /> : <GoodList goods={goods} />}
     </div>
   );
