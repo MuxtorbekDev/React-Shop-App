@@ -78,3 +78,23 @@ nav {
     bottom: unset;
   }
 }
+.basket-list {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  width: 50rem;
+  max-width: 95%;
+  box-shadow: 0 6px 15px 0pp rgba(0,0,0,.5)
+}
+.basket-close {
+  cursor: pointer;
+  position: absolute;
+  top: .5rem;
+  right: 0.5rem;
+  color: #fff;
+}
+.material-icons {
+  cursor: pointer;
+}
