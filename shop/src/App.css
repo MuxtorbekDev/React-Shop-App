@@ -86,7 +86,8 @@ nav {
   background: #fff;
   width: 50rem;
   max-width: 95%;
-  box-shadow: 0 6px 15px 0pp rgba(0,0,0,.5)
+  box-shadow: 0 6px 15px 0pp rgba(0,0,0,.5);
+  animation: show .5s ease-in;
 }
 .basket-close {
   cursor: pointer;
@@ -97,4 +98,13 @@ nav {
 }
 .material-icons {
   cursor: pointer;
+}
+
+@keyframes show {
+  0% {
+    top: 67%; opacity: 0;
+  }
+  100% {
+    top: 50%; opacity: 1;
+  }
 }

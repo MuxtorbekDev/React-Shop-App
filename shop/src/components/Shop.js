@@ -37,6 +37,10 @@ export default function Shop() {
   const handleBasketShow = () => {
     setIsBasketShow(!isBasketShow);
   };
+  const removeFromBasket = (itemId) => {
+    const newOrder = order.filter((item) => item.id !== itemId);
+    setOrder(newOrder);
+  };
 
   useEffect(() => {
     fetch(API_URL, {
@@ -60,7 +64,11 @@ export default function Shop() {
         <GoodList goods={goods} addToBasket={addToBasket} />
       )}
       {isBasketShow && (
-        <BasketList order={order} handleBasketShow={handleBasketShow} />
+        <BasketList
+          order={order}
+          handleBasketShow={handleBasketShow}
+          removeFromBasket={removeFromBasket}
+        />
       )}
     </div>
   );
