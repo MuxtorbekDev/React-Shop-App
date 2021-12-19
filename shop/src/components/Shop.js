@@ -4,6 +4,7 @@ import Loader from "./Loader";
 import GoodList from "./GoodList";
 import Cart from "./Cart";
 import BasketList from "./BasketList";
+import { toast } from "react-toastify";
 
 export default function Shop() {
   const [goods, setGoods] = useState([]);
@@ -32,6 +33,7 @@ export default function Shop() {
       });
       setOrder(newOrder);
     }
+    toast.success("Mahsulot qo'shildi! ");
   };
   const handleBasketShow = () => {
     setIsBasketShow(!isBasketShow);
@@ -39,6 +41,7 @@ export default function Shop() {
   const removeFromBasket = (itemId) => {
     const newOrder = order.filter((item) => item.id !== itemId);
     setOrder(newOrder);
+    toast.error("Mahsulot o'chirildi! ");
   };
   const incrementQuantity = (itemId) => {
     const newOrder = order.map((el) => {
@@ -53,6 +56,7 @@ export default function Shop() {
       }
     });
     setOrder(newOrder);
+    toast.success("+1 mahsulot qo'shildi  ");
   };
   const decremntQuantity = (itemId) => {
     const newOrder = order.map((el) => {
@@ -67,6 +71,7 @@ export default function Shop() {
       }
     });
     setOrder(newOrder);
+    toast.error("-1 mahsulot o'chirildi!");
   };
 
   useEffect(() => {

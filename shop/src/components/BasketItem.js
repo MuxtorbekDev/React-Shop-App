@@ -12,14 +12,14 @@ export default function BasketItem(props) {
     <li className="collection-item">
       {name} x{quantity} = {price * quantity}
       <b>$</b>
-      <span className="secondary-content">
-        <i class="material-icons" onClick={() => incrementQuantity(id)}>
+      <span className="secondary-content ">
+        <i className="material-icons" onClick={() => incrementQuantity(id)}>
           add_circle
         </i>
-        <i class="material-icons" onClick={() => decremntQuantity(id)}>
+        <i className="material-icons" onClick={() => decremntQuantity(id)}>
           do_not_disturb_on
         </i>
-        <i class="material-icons" onClick={() => removeFromBasket(id)}>
+        <i className="material-icons" onClick={() => removeFromBasket(id)}>
           delete_forever
         </i>
       </span>
